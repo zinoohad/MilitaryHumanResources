@@ -5,8 +5,83 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MilitaryHumanResources"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
-    <Grid>
-        
-    </Grid>
+        Loaded="Window_Loaded"
+        FlowDirection="RightToLeft"
+        SizeChanged="Window_SizeChanged"
+        MouseDown="Window_MouseDown"
+        Title="MainWindow" Height="800" Width="1200" WindowStartupLocation="CenterScreen" WindowStyle="None">
+    <DockPanel>
+        <Grid Name="HeaderG" DockPanel.Dock="Top">
+            <Image Source="pack://siteoforigin:,,,/Resources/soldier_icon.png" HorizontalAlignment="Left"/>
+            <Label Grid.Row="1" Grid.Column="1" Content="ניהול כח אדם" HorizontalAlignment="Center" VerticalAlignment="Center" Padding="5,0" FontWeight="Bold"/>
+            <StackPanel Grid.Row="1" Grid.Column="2" Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Top">
+                <StackPanel.Resources>
+                    <Style x:Key="windowActions" TargetType="{x:Type Button}">
+                        <Setter Property="Height" Value="20"/>
+                        <Setter Property="Width" Value="30"/>
+                        <Setter Property="BorderThickness" Value="0"/>
+                        <Setter Property="Background" Value="Transparent"/>
+                        <Setter Property="Foreground" Value="Black"/>
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="{x:Type Button}">
+                                    <Border Background="{TemplateBinding Background}">
+                                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                    </Border>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="LightGray"/>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                    <Style TargetType="{x:Type Button}" x:Key="exitAction" BasedOn="{StaticResource windowActions}">
+
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Foreground" Value="White"/>
+                                <Setter Property="Background" Value="Red"/>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </StackPanel.Resources>
+                <Button Name="minimizeWindowB" Style="{StaticResource windowActions}" Content="▁" Click="MinimizeWindowB_Click"/>
+                <Button Name="maximizeWindowB" Style="{StaticResource windowActions}" Content="⬜" Click="MaximizeWindowB_Click"/>
+                <Button Name="exitB" Style="{StaticResource exitAction}" Content="✕" Click="ExitB_Click"/>
+            </StackPanel>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+        </Grid>
+
+        <StatusBar DockPanel.Dock="Bottom" Height="30" Background="#FF1D8EEC" Foreground="White" VerticalAlignment="Bottom">
+            <StatusBar.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="100" />
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="100" />
+                        </Grid.ColumnDefinitions>
+                    </Grid>
+                </ItemsPanelTemplate>
+            </StatusBar.ItemsPanel>
+            <StatusBarItem Grid.Column="0">
+                <Label Name="SystemState" Content="סטאטוס מערכת: "/>
+            </StatusBarItem>
+            <Separator Grid.Column="1" />
+            <StatusBarItem Grid.Column="2">
+                <TextBlock Text="c:\path\of\current\file.txt" />
+            </StatusBarItem>
+        </StatusBar>
+    </DockPanel>
 </Window>
