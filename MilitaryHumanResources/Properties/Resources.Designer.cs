@@ -61,6 +61,64 @@ namespace MilitaryHumanResources.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Application.
+        /// </summary>
+        internal static string EventViewerLogApp {
+            get {
+                return ResourceManager.GetString("EventViewerLogApp", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to MilitaryHumanResources.
+        /// </summary>
+        internal static string EventViewerSource {
+            get {
+                return ResourceManager.GetString("EventViewerSource", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap left_arrow_button_black {
+            get {
+                object obj = ResourceManager.GetObject("left_arrow_button_black", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap left_arrow_button_white {
+            get {
+                object obj = ResourceManager.GetObject("left_arrow_button_white", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap right_arrow_button_black {
+            get {
+                object obj = ResourceManager.GetObject("right_arrow_button_black", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap right_arrow_button_white {
+            get {
+                object obj = ResourceManager.GetObject("right_arrow_button_white", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
         /// </summary>
         internal static System.Drawing.Icon soldier_app_icon {
@@ -76,6 +134,16 @@ namespace MilitaryHumanResources.Properties {
         internal static System.Drawing.Bitmap soldier_icon {
             get {
                 object obj = ResourceManager.GetObject("soldier_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap user_avatar {
+            get {
+                object obj = ResourceManager.GetObject("user_avatar", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

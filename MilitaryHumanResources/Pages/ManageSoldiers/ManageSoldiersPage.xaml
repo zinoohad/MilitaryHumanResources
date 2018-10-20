@@ -1,0 +1,119 @@
+﻿<Page x:Class="MilitaryHumanResources.Pages.ManageSoldiers.ManageSoldiersPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:MilitaryHumanResources.Pages.ManageSoldiers"
+      mc:Ignorable="d" 
+      d:DesignHeight="732" d:DesignWidth="1049"
+      FlowDirection="RightToLeft"
+      HorizontalAlignment="Stretch" VerticalAlignment="Stretch" 
+      Background="White"
+      Title="ManageSoldiersPage">
+
+    <DockPanel LastChildFill="True">
+        <StackPanel DockPanel.Dock="Right" VerticalAlignment="Stretch" Orientation="Vertical">
+            <ListView Name="UsersLV" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" SelectionMode="Single" Margin="10">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn Header="שם" DisplayMemberBinding="{Binding Name}"/>
+                        <GridViewColumn Header="מקצוע ראשי" DisplayMemberBinding="{Binding Profession}"/>
+                        <GridViewColumn Header="שיבוץ" DisplayMemberBinding="{Binding CombatInlay}"/>
+                    </GridView>
+                </ListView.View>
+            </ListView>
+            <Button Name="CreateNewSoldir" Content="צור חייל חדש" Margin="10" Background="#FFA0DCEA" FontWeight="Bold" Click="CreateNewSoldir_Click"/>
+        </StackPanel>
+        <Grid DockPanel.Dock="Top">
+            <Image Grid.Column="0" VerticalAlignment="Top" Source="pack://siteoforigin:,,,/Resources/user_avatar.png" Margin="10"/>
+            <WrapPanel Grid.Column="1" MinWidth="500" MaxWidth="800">
+                <WrapPanel.Resources>
+                    <Style TargetType="{x:Type StackPanel}">
+                        <Setter Property="Margin" Value="10"/>
+                    </Style>
+                    <Style TargetType="{x:Type Label}">
+                        <Setter Property="Margin" Value="5,0"/>
+                    </Style>
+                    <Style TargetType="{x:Type ComboBox}">
+                        <Setter Property="Width" Value="150"/>
+                    </Style>
+                    <Style TargetType="{x:Type TextBox}">
+                        <Setter Property="Width" Value="150"/>
+                    </Style>
+
+                </WrapPanel.Resources>
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="מספר אישי:"/>
+                    <TextBox/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="שם:"/>
+                    <TextBox/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="דרגה:"/>
+                    <TextBox/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="תפקיד:"/>
+                    <ComboBox/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="מקצוע ראשי:"/>
+                    <ComboBox/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="מקצוע משני:"/>
+                    <ComboBox/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="שיבוץ לכלי:"/>
+                    <ComboBox/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="תאריך לידה:"/>
+                    <DatePicker Width="150"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="גיל:"/>
+                    <TextBox IsReadOnly="True"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="כתובת:"/>
+                    <TextBox />
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="טלפון נייד:"/>
+                    <TextBox />
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="טלפון בבית:"/>
+                    <TextBox />
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="אי-מייל:"/>
+                    <TextBox Height="26" VerticalAlignment="Top"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="הערות:"/>
+                    <RichTextBox Width="250" Height="100" />
+                </StackPanel>
+            </WrapPanel>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+        </Grid>
+        
+        <TabControl DockPanel.Dock="Bottom" Name="PropertiesTC" VerticalAlignment="Stretch" Margin="10,10,0,10" HorizontalAlignment="Stretch">
+            <TabItem Header="צפי התייצבות"></TabItem>
+            <TabItem Header="פערים"></TabItem>
+            <TabItem Header="הסטורית שיבוץ קרבי"></TabItem>
+            <TabItem Header="הסטורית קורסים/השתלמויות"></TabItem>
+        </TabControl>
+        
+    </DockPanel>
+</Page>

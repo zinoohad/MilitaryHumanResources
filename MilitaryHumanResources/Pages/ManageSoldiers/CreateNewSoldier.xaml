@@ -1,0 +1,91 @@
+﻿<Page x:Class="MilitaryHumanResources.Pages.ManageSoldiers.CreateNewSoldier"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:MilitaryHumanResources.Pages.ManageSoldiers"
+      mc:Ignorable="d" 
+      d:DesignHeight="732" d:DesignWidth="250"
+      FlowDirection="RightToLeft"
+      HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+      Background="White"
+      Title="CreateNewSoldier"
+      x:Name="createNewSoldierP">
+
+    <Grid Name="FormG">
+        <Grid.Resources>
+            <Style TargetType="{x:Type DatePicker}">
+                <Setter Property="HorizontalAlignment" Value="Stretch"/>
+                <Setter Property="Margin" Value="3"/>
+            </Style>
+            <Style TargetType="{x:Type Label}">
+                <Setter Property="Margin" Value="3"/>
+            </Style>
+            <Style TargetType="{x:Type RichTextBox}">
+                <Setter Property="HorizontalAlignment" Value="Stretch"/>
+                <Setter Property="Margin" Value="3"/>
+            </Style>
+            <Style TargetType="{x:Type ComboBox}">
+                <Setter Property="HorizontalAlignment" Value="Stretch"/>
+                <Setter Property="Margin" Value="3"/>
+            </Style>
+            <Style TargetType="{x:Type TextBox}">
+                <Setter Property="HorizontalAlignment" Value="Stretch"/>
+                <Setter Property="Margin" Value="3"/>
+            </Style>
+        </Grid.Resources>
+        <Image Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" Name="SoldirAvatarI" Height="80" VerticalAlignment="Top" Source="{Binding Path=SoldirAvatar}" Margin="10" MouseDown="SoldirAvatarI_MouseDown"/>
+        <Label Grid.Row="1" Grid.Column="0" Content="מספר אישי:"/>
+        <TextBox Grid.Row="1" Grid.Column="1" Name="IdTB" Text="{Binding Path=ID}"/>
+        <Label Grid.Row="2" Grid.Column="0" Content="שם:"/>
+        <TextBox  Grid.Row="2" Grid.Column="1" Name="NameTB" Text="{Binding Path=Name}"/>
+        <Label Grid.Row="3" Grid.Column="0" Content="דרגה:"/>
+        <TextBox Grid.Row="3" Grid.Column="1" Name="RankTB" Text="{Binding Path=Rank}"/>
+        <Label Grid.Row="4" Grid.Column="0" Content="תפקיד:"/>
+        <ComboBox Grid.Row="4" Grid.Column="1" Name="RoleCB" SelectedItem="{Binding Path=Role}"/>
+        <Label Grid.Row="5" Grid.Column="0" Content="מקצוע ראשי:"/>
+        <ComboBox Grid.Row="5" Grid.Column="1" Name="MainProfessionCB" SelectedItem="{Binding Path=MainProfession}"/>
+        <Label Grid.Row="6" Grid.Column="0" Content="מקצוע משני:"/>
+        <ComboBox Grid.Row="6" Grid.Column="1" Name="SecondaryProfessionCB" SelectedItem="{Binding Path=SecondaryProfession}"/>
+        <Label Grid.Row="7" Grid.Column="0" Content="שיבוץ קרבי:"/>
+        <ComboBox Grid.Row="7" Grid.Column="1" Name="CombatInlayCB" SelectedItem="{Binding Path=CombatInlay}"/>
+        <Label Grid.Row="8" Grid.Column="0" Content="תאריך לידה:"/>
+        <DatePicker Grid.Row="8" Grid.Column="1" Name="DateOfBirthDP" SelectedDate="{Binding Path=DateOfBirth}"/>
+        <Label Grid.Row="9" Grid.Column="0" Content="גיל:"/>
+        <TextBox Grid.Row="9" Grid.Column="1" IsReadOnly="True" Name="AgeTB" Text="{Binding Path=Age}"/>
+        <Label Grid.Row="10" Grid.Column="0" Content="כתובת:"/>
+        <TextBox Grid.Row="10" Grid.Column="1" Name="AddressTB" Text="{Binding Path=Address}"/>
+        <Label Grid.Row="11" Grid.Column="0" Content="טלפון נייד:"/>
+        <TextBox Grid.Row="11" Grid.Column="1" Name="MobileNumberTB" Text="{Binding Path=MobileNumber}"/>
+        <Label Grid.Row="12" Grid.Column="0" Content="טלפון בבית:"/>
+        <TextBox Grid.Row="12" Grid.Column="1" Name="HomeNumberTB" Text="{Binding Path=HomeNumber}"/>
+        <Label Grid.Row="13" Grid.Column="0" Content="אי-מייל:"/>
+        <TextBox Grid.Row="13" Grid.Column="1" Name="EmailTB" Text="{Binding Path=Email}"/>
+        <Label Grid.Row="14" Grid.Column="0" Content="הערות:"/>
+        <TextBox Grid.Row="14" Grid.Column="1" Height="100" Name="NotesRTB" Text="{Binding Path=Notes}"/>
+        <Button Grid.Row="15" Grid.Column="0" Grid.ColumnSpan="2" Content="Save" Name="saveNewSoldierB" Margin="10" Click="SubmitNewSoldir_Click"/>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+    </Grid>
+    
+</Page>

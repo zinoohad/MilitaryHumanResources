@@ -1,0 +1,122 @@
+﻿<Page x:Class="MilitaryHumanResources.Pages.MainPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:MilitaryHumanResources.Pages"
+      mc:Ignorable="d" 
+      FlowDirection="RightToLeft"
+      d:DesignHeight="732" d:DesignWidth="1192"
+      HorizontalAlignment="Stretch" VerticalAlignment="Stretch" 
+      Title="MainPage">
+
+    <Grid>
+        <StackPanel Grid.Column="0">
+            <Expander Name="ManageSoldiersE" Header="ניהול חיילים">
+                <Grid>
+                    <Button Grid.Column="1" Grid.Row="0" Name="CreateNewSoldierB" Content="יצירת חייל חדש"/>
+                    <Button Grid.Column="1" Grid.Row="1" Name="EditSoldierB" Content="עריכת חייל קיים"/>
+                    <Button Grid.Column="1" Grid.Row="2" Name="ChangeSoldierSubUnitB" Content="שינוי יחידת משנה"/>
+                    <Button Grid.Column="1" Grid.Row="3" Name="OrdinanceB" Content="התייצבות למופעים"/>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                </Grid>
+            </Expander>
+            <Expander Name="ManageOrdinanceE" Header="ניהול מופעים">
+                <Grid>
+                    <Button Grid.Column="1" Grid.Row="0" Name="CreateNewOrdinanceB" Content="יצירת מופע חדש"/>
+                    <Button Grid.Column="1" Grid.Row="1" Name="EditOrdinanceB" Content="עריכת מופע קיים"/>
+                    <Button Grid.Column="1" Grid.Row="2" Name="ArrivalStatusB" Content="סטאטוס התייצבות"/>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                </Grid>
+            </Expander>
+            <Expander Name="ManageCombatInlayE" Header="ניהול שבצ''ק">
+                <Grid>
+                    <Button Grid.Column="1" Grid.Row="0" Name="SoldiersCombatInlayB" Content="שיבוץ חיילים"/>
+                    <Button Grid.Column="1" Grid.Row="1" Name="StandardVsActualB" Content="תקן - מצבה"/>
+                    <Button Grid.Column="1" Grid.Row="2" Name="ProfessionsB" Content="מקצועות"/>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                </Grid>
+            </Expander>
+            <Expander Name="ManageArmoredVehiclesE" Header="ניהול רכב רק''מ">
+                <Grid>
+                    <Button Grid.Column="1" Grid.Row="0" Name="CreateNewVehiclesB" Content="יצירת כלי חדש"/>
+                    <Button Grid.Column="1" Grid.Row="1" Name="EditExistsVehiclesB" Content="עריכת כלי קיים"/>
+                    <Button Grid.Column="1" Grid.Row="2" Name="VehiclesTypeB" Content="סוג כלי"/>
+                    <Button Grid.Column="1" Grid.Row="3" Name="VehiclesFixStatusB" Content="סטאטוס כשירות כלים"/>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                </Grid>
+            </Expander>
+            <Expander Name="Reports" Header="דוחות">
+                <Grid>
+                    <Button Grid.Column="1" Grid.Row="0" Name="BirthdayReportB" Content="ימי הולדת"/>
+                    <Button Grid.Column="1" Grid.Row="1" Name="ExpectedReleasesReportB" Content="שחרורים צפויים"/>
+                    <Button Grid.Column="1" Grid.Row="2" Name="ExpectedSoldiersArrivalReportB" Content="צפי התייצבות למופעים"/>
+                    <Button Grid.Column="1" Grid.Row="3" Name="ManningHumanResourcesReportB" Content="איוש כ''א"/>
+                    <Button Grid.Column="1" Grid.Row="4" Name="GeneralGapsReportB" Content="פערים במחלקה"/>
+                    <Button Grid.Column="1" Grid.Row="5" Name="CombatInlayGapsReportB" Content="פערי שבצ''ק"/>
+                    <Button Grid.Column="1" Grid.Row="6" Name="CombatInlayStatusReportB" Content="מצב שיבוץ קרבי"/>
+                    <Button Grid.Column="1" Grid.Row="7" Name="HumanResourcesReportB" Content="כח אדם"/>
+                    <Button Grid.Column="1" Grid.Row="8" Name="VehiclesFixStatusReportB" Content="סטאטוס כשירות"/>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                </Grid>
+            </Expander>
+        </StackPanel>
+        <Frame Grid.Column="2" x:Name="MainContainerF" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" NavigationUIVisibility="Hidden"/>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="20" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+    </Grid>
+</Page>
