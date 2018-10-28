@@ -23,13 +23,7 @@ namespace MilitaryHumanResources.Pages
     {
         private static ISplitPageController _instance;
 
-        public static ISplitPageController Instance
-        {
-            get
-            {
-                return _instance ?? (_instance = new SplitPageContainer());
-            }
-        }
+        public static ISplitPageController Instance => _instance ?? (_instance = new SplitPageContainer());
 
         private IPageBind<dynamic> _currentDisplayPage;
 

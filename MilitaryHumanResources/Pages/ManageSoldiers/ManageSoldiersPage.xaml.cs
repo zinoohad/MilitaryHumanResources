@@ -3,6 +3,7 @@ using MilitaryHumanResources.Model;
 using System;
 using System.Windows;
 using System.Windows.Controls;
+using MilitaryHumanResources.Database.SQLite;
 
 namespace MilitaryHumanResources.Pages.ManageSoldiers
 {
@@ -11,6 +12,8 @@ namespace MilitaryHumanResources.Pages.ManageSoldiers
     /// </summary>
     public partial class ManageSoldiersPage : Page, IPageBind<Soldier>
     {
+
+        private SQLiteHelper _sql = new SQLiteHelper();
 
         private Lazy<CreateNewSoldier> _createNewSoldirPage = new Lazy<CreateNewSoldier>();
 

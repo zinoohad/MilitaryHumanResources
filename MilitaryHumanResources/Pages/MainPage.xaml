@@ -6,6 +6,7 @@
       xmlns:local="clr-namespace:MilitaryHumanResources.Pages"
       mc:Ignorable="d" 
       FlowDirection="RightToLeft"
+      Loaded="MainPage_OnLoaded"
       d:DesignHeight="732" d:DesignWidth="1192"
       HorizontalAlignment="Stretch" VerticalAlignment="Stretch" 
       Title="MainPage">
@@ -14,7 +15,7 @@
         <StackPanel Grid.Column="0">
             <Expander Name="ManageSoldiersE" Header="ניהול חיילים">
                 <Grid>
-                    <Button Grid.Column="1" Grid.Row="0" Name="CreateNewSoldierB" Content="יצירת חייל חדש"/>
+                    <Button Grid.Column="1" Grid.Row="0" Name="CreateNewSoldierB" Content="יצירת חייל חדש" Click="MenuButtonClicked_OnClick"/>
                     <Button Grid.Column="1" Grid.Row="1" Name="EditSoldierB" Content="עריכת חייל קיים"/>
                     <Button Grid.Column="1" Grid.Row="2" Name="ChangeSoldierSubUnitB" Content="שינוי יחידת משנה"/>
                     <Button Grid.Column="1" Grid.Row="3" Name="OrdinanceB" Content="התייצבות למופעים"/>

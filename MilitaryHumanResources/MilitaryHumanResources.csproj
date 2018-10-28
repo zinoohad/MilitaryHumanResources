@@ -168,7 +168,9 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\soldier_icon.ico" />
+    <None Include="Resources\soldier_icon.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Resource Include="soldier_icon.ico" />
@@ -177,19 +179,29 @@
     <Folder Include="Window\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\right_arrow_button_black.png" />
+    <None Include="Resources\right_arrow_button_black.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\right_arrow_button_white.png" />
+    <None Include="Resources\right_arrow_button_white.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\left_arrow_button_black.png" />
+    <None Include="Resources\left_arrow_button_black.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\left_arrow_button_white.png" />
+    <None Include="Resources\left_arrow_button_white.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\user_avatar.png" />
+    <None Include="Resources\user_avatar.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Database\SQLite\Resources\MilitaryDBScript.sql">

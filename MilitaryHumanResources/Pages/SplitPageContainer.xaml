@@ -12,7 +12,7 @@
 
     <Grid x:Name="grid">
         <Frame Grid.Column="0" x:Name="MainPageF" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" NavigationUIVisibility="Hidden"/>
-        <Button Grid.Column="1" x:Name="OpenCloseSecondaryPageB" VerticalAlignment="Center" Height="{Binding ActualHeight, ElementName=grid, Mode=OneWay}" Margin="0,364,0,320">
+        <Button Grid.Column="1" x:Name="OpenCloseSecondaryPageB" Height="{Binding ActualHeight, ElementName=grid, Mode=OneWay}" Margin="0,22,0,-22">
             <Button.Background>
                 <ImageBrush ImageSource="pack://siteoforigin:,,,/Resources/left_arrow_button_white.png" Stretch="Uniform"/>
             </Button.Background>

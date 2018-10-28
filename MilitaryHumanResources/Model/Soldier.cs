@@ -45,7 +45,10 @@ namespace MilitaryHumanResources.Model
 
         public long GetItemId() => ID;
 
-        public static string GetTableName() => "Soldier";
+        public string GetTableName()
+        {
+            return "Soldier";
+        }
 
         public string InsertItem()
         {
@@ -57,10 +60,9 @@ namespace MilitaryHumanResources.Model
         {
             return $"UPDATE {GetTableName()} SET " +
                 $"Name = '{Name}', Rank = {Rank.ID}, Role = {Role.ID}, Main_Profession = {MainProfession.ID}, Secondary_Profession = {SecondaryProfession.ID}, " +
-                $"Combat_Inlay = {CombatInlay.ID} ,Date_Of_Birth = '{DateOfBirth:yyyy-MM-dd}' ,Address = '{Address}', Mobile_Number = '{MobileNumber}', " +
+                $"Combat_Inlay = {CombatInlay.ID}, Date_Of_Birth = '{DateOfBirth:yyyy-MM-dd}', Address = '{Address}', Mobile_Number = '{MobileNumber}', " +
                 $"Home_Number = '{HomeNumber}', Email = '{Email}', Notes = '{Notes}'" +
                 $"WHERE ID = {ID}";
-
         }
 
         #endregion  // Implemented

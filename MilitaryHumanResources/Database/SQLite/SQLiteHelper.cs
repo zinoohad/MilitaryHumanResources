@@ -21,20 +21,10 @@ namespace MilitaryHumanResources.Database.SQLite
             }
 
             var dt = _db.Select($"SELECT * FROM {item.GetTableName()} WHERE ID = {item.GetItemId()}");
-            if (dt?.Rows.Count > 0)
-            {
-                // Update
-                return _db.Update(item.UpdateItem());
-            }
-            else
-            {
-                // Insert
-                return _db.Insert(item.InsertItem());
-            }
+            return dt?.Rows.Count > 0 ? _db.Update(item.UpdateItem()) : _db.Insert(item.InsertItem());
         }
 
         #endregion  // General
-
 
         #region Soldir
 
