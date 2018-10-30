@@ -6,6 +6,7 @@
       xmlns:local="clr-namespace:MilitaryHumanResources.Pages.ManageSoldiers"
       mc:Ignorable="d" 
       d:DesignHeight="732" d:DesignWidth="1049"
+      Loaded="ManageSoldiersPage_OnLoaded"
       FlowDirection="RightToLeft"
       HorizontalAlignment="Stretch" VerticalAlignment="Stretch" 
       Background="White"
@@ -17,16 +18,17 @@
                 <ListView.View>
                     <GridView>
                         <GridViewColumn Header="שם" DisplayMemberBinding="{Binding Name}"/>
-                        <GridViewColumn Header="מקצוע ראשי" DisplayMemberBinding="{Binding Profession}"/>
-                        <GridViewColumn Header="שיבוץ" DisplayMemberBinding="{Binding CombatInlay}"/>
+                        <GridViewColumn Header="מקצוע ראשי" DisplayMemberBinding="{Binding MainProfession.Title}"/>
+                        <GridViewColumn Header="שיבוץ" DisplayMemberBinding="{Binding CombatInlay.Name}"/>
                     </GridView>
                 </ListView.View>
             </ListView>
-            <Button Name="CreateNewSoldir" Content="צור חייל חדש" Margin="10" Background="#FFA0DCEA" FontWeight="Bold" Click="CreateNewSoldir_Click"/>
+            <Button Name="CreateNewSoldir" Content="צור חייל חדש" Margin="10" Background="#FFA0DCEA" FontWeight="Bold" Click="CreateNewSoldir_Click" Height="23"/>
         </StackPanel>
         <Grid DockPanel.Dock="Top">
-            <Image Grid.Column="0" VerticalAlignment="Top" Source="pack://siteoforigin:,,,/Resources/user_avatar.png" Margin="10"/>
-            <WrapPanel Grid.Column="1" MinWidth="500" MaxWidth="800">
+            <Image Grid.Column="0" Grid.Row="0" VerticalAlignment="Top" Source="pack://siteoforigin:,,,/Resources/user_avatar.png" Margin="10"/>
+            <Button Grid.Column="0" Grid.Row="1" Height="23" Margin="10" Content="שמור" Background="LightSteelBlue " FontWeight="Bold" VerticalAlignment="Bottom"></Button>
+            <WrapPanel Grid.Column="1" MinWidth="500" Grid.RowSpan="2">
                 <WrapPanel.Resources>
                     <Style TargetType="{x:Type StackPanel}">
                         <Setter Property="Margin" Value="10"/>
@@ -71,6 +73,10 @@
                     <ComboBox/>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal">
+                    <Label Content="יחידת משנה:"/>
+                    <ComboBox/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
                     <Label Content="תאריך לידה:"/>
                     <DatePicker Width="150"/>
                 </StackPanel>
@@ -101,10 +107,11 @@
             </WrapPanel>
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="Auto" />
-                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
         </Grid>
         

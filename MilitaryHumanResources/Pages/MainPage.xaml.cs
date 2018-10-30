@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using MilitaryHumanResources.Interface;
+using MilitaryHumanResources.Model;
 using MilitaryHumanResources.Pages.ManageSoldiers;
 
 namespace MilitaryHumanResources.Pages
@@ -38,7 +40,7 @@ namespace MilitaryHumanResources.Pages
         private void MenuButtonClicked_OnClick(object sender, RoutedEventArgs e)
         {
             var button = (Button) sender;
-            Page page = null;
+            object page = null;
             switch (button.Name)
             {
                 case "CreateNewSoldierB":

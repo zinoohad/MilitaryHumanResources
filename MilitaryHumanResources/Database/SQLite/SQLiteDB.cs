@@ -23,7 +23,8 @@ namespace MilitaryHumanResources.Database.SQLite
 
         private SQLiteDB()
         {
-
+            if (_instance == null)
+                Connect(Settings.Default.DBPath);
         }
 
         #region Implemented

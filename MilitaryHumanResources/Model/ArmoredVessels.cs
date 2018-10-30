@@ -10,8 +10,12 @@ namespace MilitaryHumanResources.Model
     {
         public int ID { get; set; }
 
+        public string MilitaryID { get; set; }
+
         public string Name { get; set; }
 
         public int Capacity { get; set; }
+
+        public string FullName => Name + (MilitaryID == null ? "" : $" [{MilitaryID}]");
     }
 }

@@ -4,7 +4,7 @@ namespace MilitaryHumanResources.Interface
 {
     public interface ISplitPageController
     {
-        void LoadMainPage(Page page);
+        void LoadMainPage(object page);
 
         void OpenSubMenu<T>(ISubPageBind<T> bindPage, T data);
 

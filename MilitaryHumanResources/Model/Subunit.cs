@@ -6,24 +6,24 @@ using System.Threading.Tasks;
 
 namespace MilitaryHumanResources.Model
 {
-    public class Role
+    public class Subunit
     {
         public int ID { get; set; }
 
-        public string Title { get; set; }
+        public string Name { get; set; }
 
         public override bool Equals(object obj)
         {
-            var role = obj as Role;
-            return role != null &&
-                   ID == role.ID;
+            var subunit = obj as Subunit;
+            return subunit != null &&
+                   ID == subunit.ID;
         }
 
         public override int GetHashCode()
         {
-            var hashCode = 1831404553;
+            var hashCode = 1479869798;
             hashCode = hashCode * -1521134295 + ID.GetHashCode();
-            hashCode = hashCode * -1521134295 + EqualityComparer<string>.Default.GetHashCode(Title);
+            hashCode = hashCode * -1521134295 + EqualityComparer<string>.Default.GetHashCode(Name);
             return hashCode;
         }
     }

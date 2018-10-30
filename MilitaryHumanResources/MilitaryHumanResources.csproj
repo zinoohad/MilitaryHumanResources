@@ -85,6 +85,8 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Common\DynamicClassLoader.cs" />
+    <Compile Include="Common\Enums.cs" />
+    <Compile Include="Common\Extentions.cs" />
     <Compile Include="Common\Logger.cs" />
     <Compile Include="Database\BaseSqlCommands.cs" />
     <Compile Include="Database\DatabaseEnums.cs" />
@@ -124,6 +126,7 @@
     <Compile Include="Model\Rank.cs" />
     <Compile Include="Model\Role.cs" />
     <Compile Include="Model\Soldier.cs" />
+    <Compile Include="Model\Subunit.cs" />
     <Compile Include="Pages\MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>

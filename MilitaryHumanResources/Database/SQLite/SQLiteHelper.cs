@@ -24,9 +24,16 @@ namespace MilitaryHumanResources.Database.SQLite
             return dt?.Rows.Count > 0 ? _db.Update(item.UpdateItem()) : _db.Insert(item.InsertItem());
         }
 
+        public List<T> GetTableByObjectType<T>(string tableName = null) where T : class
+        {
+            tableName = tableName ?? typeof(T).Name;
+            var dt = _db.Select($"SELECT * FROM {tableName}");
+            return DynamicClassLoader.LoadObjectList<T>(dt);
+        }
+
         #endregion  // General
 
-        #region Soldir
+        #region Soldier
 
         public List<Soldier> GetListOfSoldiers()
         {
@@ -61,11 +68,28 @@ namespace MilitaryHumanResources.Database.SQLite
                     Name = dr["ArmoredVesselsName"].ToString(),
                     Capacity = int.Parse(dr["ArmoredVesselsCapacity"].ToString()),
                 };
+                soldier.Subunit = new Subunit
+                {
+                    ID = int.Parse(dr["SubunitID"].ToString()),
+                    Name = dr["SubunitName"].ToString()
+                };
                 soldiers.Add(soldier);
             }
             return soldiers;
         }
 
-        #endregion  //Soldir
+        public List<Rank> GetRanks() => GetTableByObjectType<Rank>();
+
+        public List<Role> GetRoles() => GetTableByObjectType<Role>();
+
+        public List<Profession> GetProfessions() => GetTableByObjectType<Profession>();
+
+        public List<ArmoredVessels> GetArmoredVessels() => GetTableByObjectType<ArmoredVessels>();
+
+        public List<Subunit> GetSubunits() => GetTableByObjectType<Subunit>();
+
+
+
+        #endregion  //Soldier
     }
 }

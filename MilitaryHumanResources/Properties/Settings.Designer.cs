@@ -34,5 +34,17 @@ namespace MilitaryHumanResources.Properties {
                 this["SoftwareVersion"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("C:\\Users\\zinoo\\Desktop\\פרוייקט מילואים\\MilitaryHumanResources\\MilitaryDB.db")]
+        public string DBPath {
+            get {
+                return ((string)(this["DBPath"]));
+            }
+            set {
+                this["DBPath"] = value;
+            }
+        }
     }
 }
